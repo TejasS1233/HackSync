@@ -1,0 +1,16 @@
+# Lefthook hooks for client folder
+# https://lefthook.dev/configuration/
+
+pre-commit:
+  root: "client/"
+  jobs:
+    - run: npx ultracite fix
+      glob: 
+        - "*.js"
+        - "*.jsx"
+        - "*.ts"
+        - "*.tsx"
+        - "*.json"
+        - "*.jsonc"
+        - "*.css"
+      stage_fixed: true
